@@ -1,6 +1,5 @@
-package com.fada21.lifecycleplayground;
+package com.fada21.lifecycleplayground.fragments;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -13,12 +12,17 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.fada21.lifecycleplayground.LifecycleLogger;
+
 /**
  * Created by fada21 on 18/10/15.
  */
-public class BaseFragment extends Fragment {
+abstract class BaseFragment extends Fragment {
 
     final LifecycleLogger logger = new LifecycleLogger(this);
+
+    protected BaseFragment() {
+    }
 
     @Override
     public void onInflate(Context context, AttributeSet attrs, Bundle savedInstanceState) {

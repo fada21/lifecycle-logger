@@ -1,15 +1,20 @@
-package com.fada21.lifecycleplayground;
+package com.fada21.lifecycleplayground.activities;
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.widget.Toast;
+
+import com.fada21.lifecycleplayground.LifecycleLogger;
+import com.fada21.lifecycleplayground.R;
 
 /**
  * Created by fada21 on 18/10/15.
  */
-public class BaseActivity extends AppCompatActivity {
+abstract class BaseActivity extends AppCompatActivity {
 
     final LifecycleLogger logger = new LifecycleLogger(this);
 
@@ -18,7 +23,11 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         logger.logEvent(new Object() {
         }.getClass().getEnclosingMethod().getName());
+        setContentView(getLayout());
     }
+
+    @LayoutRes
+    abstract protected int getLayout();
 
     @Override
     protected void onNewIntent(Intent intent) {
@@ -61,6 +70,7 @@ public class BaseActivity extends AppCompatActivity {
         super.onResume();
         logger.logEvent(new Object() {
         }.getClass().getEnclosingMethod().getName());
+        Toast.makeText(this, String.format("Activity[%s] resumed", Integer.toHexString(hashCode())), Toast.LENGTH_SHORT).show();
     }
 
     @Override

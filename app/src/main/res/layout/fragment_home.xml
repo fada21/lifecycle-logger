@@ -7,39 +7,48 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivityFragment"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.fada21.lifecycleplayground.fragments.HomeFragment"
+    tools:showIn="@layout/activity_home">
 
-    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    <Button
         android:id="@+id/btn_regular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="new regular"
-        android:textSize="18sp" />
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:onClick="onClick"
+        android:text="new regular" />
 
-    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    <Button
+        android:id="@+id/btn_retained"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:onClick="onClick"
+        android:text="new with retained fragment" />
+
+
+    <Button
         android:id="@+id/btn_single_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="new single task"
-        android:textSize="18sp" />
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:onClick="onClick"
+        android:text="new single task" />
 
-    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    <Button
         android:id="@+id/btn_config_change"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="new conf change handled"
-        android:textSize="18sp" />
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:onClick="onClick"
+        android:text="new conf change handled" />
 
-    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+    <Button
         android:id="@+id/btn_for_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="new ror result"
-        android:textSize="18sp" />
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:onClick="onClick"
+        android:text="new ror result" />
 
 </LinearLayout>

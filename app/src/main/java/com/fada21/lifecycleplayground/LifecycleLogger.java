@@ -1,8 +1,10 @@
 package com.fada21.lifecycleplayground;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,14 +16,14 @@ public class LifecycleLogger {
 
     private final Object objectWithLifecycle;
 
-    final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
+    private final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
 
-    LifecycleLogger(Object objectWithLifecycle) {
+    public LifecycleLogger(Object objectWithLifecycle) {
         this.objectWithLifecycle = objectWithLifecycle;
     }
 
 
-    void logEvent(final String event) {
+    public void logEvent(final String event) {
         final String tag;
         if (objectWithLifecycle instanceof Activity) {
             tag = TAG_ACTIVITY;
