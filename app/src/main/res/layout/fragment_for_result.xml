@@ -7,25 +7,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.fada21.lifecycleplayground.fragments.SingleTaskFragment"
+    tools:context="com.fada21.lifecycleplayground.fragments.ForResultFragment"
     tools:showIn="@layout/activity_standard">
 
 
     <Button
-        android:id="@+id/btn_single_task"
+        android:id="@+id/btn_success"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/button_margin_bottom"
         android:onClick="onClick"
-        android:text="single task" />
+        android:text="return result" />
 
     <Button
-        android:id="@+id/btn_intermediate_standard"
+        android:id="@+id/btn_cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/button_margin_bottom"
         android:onClick="onClick"
-        android:text="intermediate standard" />
+        android:text="cancel" />
 
 
 </LinearLayout>

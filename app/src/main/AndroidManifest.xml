@@ -29,6 +29,10 @@
             android:launchMode="standard" />
 
         <activity
+            android:name=".activities.ReorderedToFrontActivity"
+            android:launchMode="standard" />
+
+        <activity
             android:name=".activities.SingleTaskActivity"
             android:launchMode="singleTask" />
 
@@ -36,6 +40,14 @@
             android:name=".activities.IntermediateActivity"
             android:launchMode="standard" />
 
+        <activity
+            android:name=".activities.ConfChangeHandledActivity"
+            android:configChanges="orientation|keyboard|screenSize"
+            android:launchMode="standard" />
+
+        <activity
+            android:name=".activities.ForResultActivity"
+            android:launchMode="standard" />
 
     </application>
 

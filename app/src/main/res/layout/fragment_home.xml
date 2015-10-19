@@ -26,6 +26,13 @@
         android:onClick="onClick"
         android:text="new with retained fragment" />
 
+    <Button
+        android:id="@+id/btn_reorder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:onClick="onClick"
+        android:text="reordered to front" />
 
     <Button
         android:id="@+id/btn_single_task"
@@ -33,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/button_margin_bottom"
         android:onClick="onClick"
-        android:text="new single task" />
+        android:text="single task" />
 
     <Button
         android:id="@+id/btn_config_change"
@@ -41,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/button_margin_bottom"
         android:onClick="onClick"
-        android:text="new conf change handled" />
+        android:text="conf change handled" />
 
     <Button
         android:id="@+id/btn_for_result"
@@ -49,6 +56,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/button_margin_bottom"
         android:onClick="onClick"
-        android:text="new ror result" />
+        android:text="for result" />
 
 </LinearLayout>

@@ -1,8 +1,6 @@
 package com.fada21.lifecycleplayground.activities;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
@@ -15,23 +13,21 @@ import com.fada21.lifecycleplayground.fragments.SingleTaskFragment;
 public class SingleTaskActivity extends StandardActivity implements View.OnClickListener {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     protected Fragment getFragment() {
         return new SingleTaskFragment();
     }
 
     @Override
     public void onClick(View v) {
+        final Intent intent;
         switch (v.getId()) {
             case R.id.btn_single_task:
-                startActivity(new Intent(this, SingleTaskActivity.class));
+                intent = new Intent(this, SingleTaskActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_intermediate_standard:
-                startActivity(new Intent(this, IntermediateActivity.class));
+                intent = new Intent(this, IntermediateActivity.class);
+                startActivity(intent);
                 break;
             default:
         }

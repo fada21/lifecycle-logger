@@ -53,7 +53,6 @@ abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        setTitle(getClass().getSimpleName());
         logger.logEvent(new Object() {
         }.getClass().getEnclosingMethod().getName());
     }
@@ -70,6 +69,15 @@ abstract class BaseActivity extends AppCompatActivity {
         super.onResume();
         logger.logEvent(new Object() {
         }.getClass().getEnclosingMethod().getName());
+        setTitle(getClass().getSimpleName());
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        logger.logEvent(new Object() {
+        }.getClass().getEnclosingMethod().getName());
+        setTitle(getClass().getSimpleName());
         Toast.makeText(this, String.format("Activity[%s] resumed", Integer.toHexString(hashCode())), Toast.LENGTH_SHORT).show();
     }
 
@@ -149,6 +157,13 @@ abstract class BaseActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+        logger.logEvent(new Object() {
+        }.getClass().getEnclosingMethod().getName());
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         logger.logEvent(new Object() {
         }.getClass().getEnclosingMethod().getName());
     }

@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.fada21.lifecycleplayground.fragments.IntermediateFragment"
-    tools:showIn="@layout/activity_single_task">
+    tools:showIn="@layout/activity_standard">
 
     <Button
         android:id="@+id/btn_single_task"
@@ -16,7 +16,31 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/button_margin_bottom"
         android:onClick="onClick"
-        android:text="new single task" />
+        android:text="single task" />
+
+    <Button
+        android:id="@+id/btn_reorder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:onClick="onClick"
+        android:text="reordered to front" />
+
+    <Button
+        android:id="@+id/btn_single_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:onClick="onClick"
+        android:text="single top intermediate" />
+
+    <Button
+        android:id="@+id/btn_intermediate_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_margin_bottom"
+        android:onClick="onClick"
+        android:text="standard intermediate" />
 
     <Button
         android:id="@+id/btn_back"
@@ -24,6 +48,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/button_margin_bottom"
         android:onClick="onClick"
-        android:text="back" />
+        android:text="go back" />
 
 </LinearLayout>

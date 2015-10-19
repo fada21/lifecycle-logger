@@ -2,6 +2,7 @@ package com.fada21.lifecycleplayground.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.MenuItem;
 
 import com.fada21.lifecycleplayground.R;
 import com.fada21.lifecycleplayground.fragments.StandardFragment;
@@ -15,6 +16,7 @@ public class StandardActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupFragment();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -33,5 +35,15 @@ public class StandardActivity extends BaseActivity {
 
     protected Fragment getFragment() {
         return new StandardFragment();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
     }
 }
